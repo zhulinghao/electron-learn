@@ -5,14 +5,30 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <title>Hello World!</title>
+    <link rel="stylesheet" href="./styles/index.css">
   </head>
   <body>
+    <div class="header">
+      <button id="closeBtn">关闭</button>
+      <button id="fullBtn">全屏</button>
+    </div>
     <h1>Hello World!</h1>
     We are using Node.js <span id="node-version"></span>,
     Chromium <span id="chrome-version"></span>,
     and Electron <span id="electron-version"></span>.
+    <a href="https://www.baidu.com" link-out>百度</a>
+    <div><button id="heroBtn">get random hero</button></div>
+    <div id="heroContainer"></div>
 
+    <div>
+      <button id="openBtn">打开子窗口</button>
+      <div>子窗口消息：</div>
+      <div id="childMessage"></div>
+    </div>
+
+    <button id="openDialog">打开dialog</button>
+    
     <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+    <script src="./renderer/index.js"></script>
   </body>
 </html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>子窗口</title>
+</head>
+<body>
+  <h2>子窗口</h2>
+  <button id="childBtn">父窗口传递信息</button>
+  <script>
+    document.querySelector('#childBtn').addEventListener('click', e => {
+      console.log('childBtn click')
+      window.opener.postMessage('子窗口信息')
+    })
+  </script>
+</body>
+</html>

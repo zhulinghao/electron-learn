@@ -1,5 +1,6 @@
 // All of the Node.js APIs are available in the preload process.
 // It has the same sandbox as a Chrome extension.
+const { dialog } = require('electron')
 window.addEventListener('DOMContentLoaded', () => {
   const replaceText = (selector, text) => {
     const element = document.getElementById(selector)
@@ -9,4 +10,11 @@ window.addEventListener('DOMContentLoaded', () => {
   for (const type of ['chrome', 'node', 'electron']) {
     replaceText(`${type}-version`, process.versions[type])
   }
+
+  // document.querySelector('#openDialog').addEventListener('click', () => {
+  //   console.log('??????')
+  //   dialog.showOpenDialog({
+  //     title: 'zlhnb'
+  //   })
+  // })
 })
